@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+</head>
+
+<body>
+
+<h1>Test File</h1>
+
+
+<script type="text/javascript" src="Example6.js"></script>
+<script>
+SquareInt = Module.cwrap('SquareInt', 'number', ['number']);
+document.write("result == " + SquareInt(10));
+</script>
+
+
+</body>
