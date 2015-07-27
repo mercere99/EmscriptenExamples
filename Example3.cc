@@ -5,8 +5,6 @@
 
 int main()
 {
-  std::cout << "Hello!" << std::endl;
-
   int val1 = 21;
   int val2 = EM_ASM_INT({ return $0 * 2; }, val1);
 
