@@ -1,19 +1,18 @@
-// Compile with:   emcc Example3.cc -o Example3.html
+// Compile with:   emcc Example4.cc -o Example4.html
 
 #include <emscripten.h>
-#include <iostream>
+#include <string>
+
+// Function to trigger alerts straight from C++
+void Alert(const std::string & msg) {
+  EM_ASM_ARGS({
+      var msg = Pointer_stringify($0); // Convert message to JS string
+      alert(msg);                      // Use JS version of alert
+    }, msg.c_str());
+}
 
 int main()
 {
-  std::cout << "Hello!" << std::endl;
-
-  int val1 = 21;
-  int val2 = EM_ASM_INT({
-      var msg = Pointer_stringify($1);
-      alert(msg);
-      return $0 * 2;
-    }, val1, "Computing!");
-
-  std::cout << "val2 == " << val2 << std::endl;
+  Alert("Hello from C++!");
 }
 
