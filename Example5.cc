@@ -1,6 +1,6 @@
 // What if we want to call a C++ function from JS?
 //
-// To Compile:  emcc -s EXPORTED_FUNCTIONS="['_SquareVal', '_main']" Example5.cc -o Example5.html
+// To Compile:  em++ -s EXPORTED_FUNCTIONS="['_SquareVal', '_main']" Example5.cc -o Example5.html
 
 #include <emscripten.h>
 

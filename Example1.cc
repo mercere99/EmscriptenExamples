@@ -1,4 +1,4 @@
-// Compile with:   emcc Example1.cc -o Example1.html
+// Compile with:   em++ Example1.cc -o Example1.html
 
 #include <iostream>
 

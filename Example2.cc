@@ -1,4 +1,4 @@
-// Compile with:   emcc Example2.cc -o Example2.html
+// Compile with:   em++ Example2.cc -o Example2.html
 
 #include <emscripten.h>
 
