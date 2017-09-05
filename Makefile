@@ -1,10 +1,10 @@
 all: Example1.html Example2.html Example3.html Example4.html Example5.html Example6.js
 
 Example5.html: Example5.cc
-	emcc -s EXPORTED_FUNCTIONS="['_SquareInt', '_main']" Example5.cc -o Example5.html
+	emcc -s EXPORTED_FUNCTIONS="['_SquareVal', '_main']" Example5.cc -o Example5.html
 
 Example6.js: Example6.cc
-	emcc -s EXPORTED_FUNCTIONS="['_SquareInt']" Example6.cc -o Example6.js
+	emcc -s EXPORTED_FUNCTIONS="['_SquareVal']" Example6.cc -o Example6.js
 
 Example%.html: Example%.cc
 	emcc  $< -o $@
